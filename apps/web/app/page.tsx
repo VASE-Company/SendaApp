@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { mockDashboard, mockTracking, mockAccountability } from '@senda/shared';
 
 const card: React.CSSProperties = { background: '#1A2438', border: '1px solid #2B3853', borderRadius: 14, padding: 16 };
@@ -5,7 +6,10 @@ const card: React.CSSProperties = { background: '#1A2438', border: '1px solid #2
 export default function Page() {
   return (
     <main style={{ maxWidth: 900, margin: '0 auto', padding: 24, display: 'grid', gap: 12 }}>
-      <h1 style={{ margin: 0 }}>Senda · Dashboard de seguimiento</h1>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <Image src="/sendaapplogo.png" alt="Senda logo" width={56} height={56} style={{ borderRadius: 12 }} />
+        <h1 style={{ margin: 0 }}>Senda · Dashboard de seguimiento</h1>
+      </div>
       <section style={card}>
         <h2>Estado actual</h2>
         <p>Racha: <strong>{mockDashboard.streakDays} días</strong> · Riesgo: {mockDashboard.riskLevel}</p>
