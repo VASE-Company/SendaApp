@@ -1,54 +1,39 @@
-"use client";
+import Link from 'next/link';
 
-import { useEffect, useState } from 'react';
-import s from './page.module.css';
-
-type DashboardPayload = {
-  source: 'mock' | 'supabase';
-  streakDays: number;
-  checkin: { mood: number; risk_level: 'low' | 'medium' | 'high' };
-};
-
-const screens = [1, 2, 3, 4, 5, 6];
-
-export default function Page() {
-  const [data, setData] = useState<DashboardPayload | null>(null);
-
-  useEffect(() => {
-    fetch('/api/dashboard')
-      .then((r) => r.json())
-      .then(setData)
-      .catch(() => setData({ source: 'mock', streakDays: 0, checkin: { mood: 3, risk_level: 'medium' } }));
-
-    const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add(s.visible)),
-      { threshold: 0.12 }
-    );
-
-    document.querySelectorAll(`.${s.card}`).forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-
+export default function Home() {
   return (
-    <main className={s.page}>
-      <header className={s.header}>
-        <h1>Senda · Stitch 1:1 base</h1>
-        <p>
-          Datos en vivo: {data?.source ?? '...'} · Racha: {data?.streakDays ?? '--'} · Riesgo: {data?.checkin.risk_level ?? '--'}
-        </p>
-      </header>
+    <main style={{ minHeight: '100vh', background: '#0b1118', color: '#e8f0ff', padding: 16 }}>
+      <div style={{ maxWidth: 900, margin: '0 auto', display: 'grid', gap: 12 }}>
+        <h1 style={{ margin: 0 }}>Senda · Onboarding</h1>
+        <p style={{ opacity: 0.8, margin: 0 }}>Base visual Stitch + flujo funcional.</p>
 
-      <section className={s.stack}>
-        {screens.map((n) => (
-          <article key={n} className={s.card}>
-            <div className={s.meta}>Pantalla {n}</div>
-            <a href={`/stitch/${n}`} style={{ color: '#9bd8ff', textDecoration: 'none', fontWeight: 700 }}>
-              Abrir como página independiente →
-            </a>
-            <iframe className={s.frame} src={`/stitch/senda${n}.html`} title={`Senda Stitch ${n}`} loading="lazy" />
-          </article>
-        ))}
-      </section>
+        <iframe
+          src="/stitch/senda1.html"
+          title="Senda Onboarding"
+          style={{ width: '100%', height: '78vh', border: 0, borderRadius: 14, background: '#fff' }}
+        />
+
+        <div style={{ display: 'flex', gap: 10 }}>
+          <Link href="/auth/signup" style={btnPrimary}>Continuar</Link>
+          <Link href="/auth/login" style={btn}>Ya tengo cuenta</Link>
+        </div>
+      </div>
     </main>
   );
 }
+
+const btn: React.CSSProperties = {
+  textDecoration: 'none',
+  color: '#dbe7ff',
+  border: '1px solid #33445f',
+  borderRadius: 10,
+  padding: '10px 14px'
+};
+
+const btnPrimary: React.CSSProperties = {
+  ...btn,
+  background: 'linear-gradient(90deg,#13c8ec,#8b5cf6)',
+  color: '#071117',
+  border: 'none',
+  fontWeight: 700
+};
