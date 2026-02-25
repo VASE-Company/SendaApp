@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Senda - Chat Bíblico</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec", // Cyan
+                        "primary-dark": "#0ea5c3",
+                        "secondary": "#8b5cf6", // Violet for user
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                        "surface-dark": "#16292d",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display h-screen flex flex-col overflow-hidden text-slate-900 dark:text-slate-100">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 shrink-0 z-10">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="text-lg font-bold tracking-tight">Guía Espiritual</h1>
+<span class="text-xs text-primary font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                En línea
+            </span>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</header>
+<!-- Chat Area -->
+<main class="flex-1 overflow-y-auto p-4 space-y-6 scroll-smooth">
+<!-- Timestamp -->
+<div class="flex justify-center">
+<span class="text-xs text-slate-400 dark:text-slate-500 font-medium px-3 py-1 bg-slate-200 dark:bg-surface-dark rounded-full">Hoy, 10:23 AM</span>
+</div>
+<!-- Bot Message (Left) -->
+<div class="flex items-end gap-3 group">
+<div class="size-10 rounded-full bg-surface-dark shrink-0 overflow-hidden ring-2 ring-surface-dark dark:ring-slate-700" data-alt="Portrait of spiritual guide bot">
+<img alt="Guía avatar" class="w-full h-full object-cover" data-alt="Calm male guide portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr_joHtnxcAXN1htt8mNhDn8MyHWLdA0tU3z2FxQVHNpLAekaClhlXPA8fi2323OGpnJv2-xkbWECpr2inC-_jNPhticZyNcGqakpBTlAt_yaFQeXqY4ktrG8R8IvCvkt9bi0UrUstcuEdWuzVw5Hkrw62bx3MuuLy0S0bd3O7rJr7oMBrxeZVO0ZW50J13yBpZECQwVGFShB2m4DSpOy6WNzjcqtp8o61V_M2kR9cUl_mjZ64PDFokM5UryITeuRMb6kn0nC6OjcF"/>
+</div>
+<div class="flex flex-col gap-1 max-w-[85%] sm:max-w-[70%]">
+<span class="text-xs text-slate-500 dark:text-slate-400 ml-1">Guía</span>
+<div class="p-4 bg-surface-dark rounded-2xl rounded-bl-none text-slate-800 dark:text-slate-100 shadow-sm border border-slate-200 dark:border-slate-700/50">
+<p class="text-sm leading-relaxed">
+                        Hola. He notado que has estado buscando paz últimamente. ¿Cómo te sientes hoy? Estoy aquí para escucharte sin juzgar.
+                    </p>
+</div>
+</div>
+</div>
+<!-- User Message (Right) -->
+<div class="flex items-end gap-3 justify-end group">
+<div class="flex flex-col gap-1 items-end max-w-[85%] sm:max-w-[70%]">
+<div class="p-4 bg-secondary text-white rounded-2xl rounded-br-none shadow-md">
+<p class="text-sm leading-relaxed">
+                        Me siento muy ansioso hoy, necesito paz. Siento que no puedo con todo lo que tengo encima.
+                    </p>
+</div>
+<span class="text-xs text-slate-400 mr-1 flex items-center gap-1">
+                    10:25 AM
+                    <span class="material-symbols-outlined text-[14px]">done_all</span>
+</span>
+</div>
+</div>
+<!-- Bot Message (Left) - With Bible Verse Highlight -->
+<div class="flex items-end gap-3 group">
+<div class="size-10 rounded-full bg-surface-dark shrink-0 overflow-hidden ring-2 ring-surface-dark dark:ring-slate-700" data-alt="Portrait of spiritual guide bot">
+<img alt="Guía avatar" class="w-full h-full object-cover" data-alt="Calm male guide portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzzzXm6U6yw3BKnS3tK-azXmEcXhd37MieWc_p-TrUetYQ6ZXQBcnEUK9UG0VTRbaT9cVUAJ8kcxh8L-aYf3zsAaCCoIoPZTcWFFpGsWKAeDicohgyY3zcA6v1ro9raJVQsUwSwukFjzFncNdm6vOrmcrSDsOZ5OSkSaatUIQSt3Hb1tuIBlvBPRT2W6KGrIKHLvEHrrWtduHSVfP_44f3T4882wtZdNxeAnPOv1XexmVCuldQpehEstK58Whdvh13UGczDYKZ00DW"/>
+</div>
+<div class="flex flex-col gap-1 max-w-[90%] sm:max-w-[75%]">
+<span class="text-xs text-slate-500 dark:text-slate-400 ml-1">Guía</span>
+<div class="flex flex-col bg-surface-dark rounded-2xl rounded-bl-none overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700/50">
+<div class="p-4 pb-3">
+<p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed mb-3">
+                            Entiendo profundamente tu sentir. Recuerda que esta prueba es temporal. Dios te promete una salida:
+                        </p>
+</div>
+<!-- Bible Verse Card within bubble -->
+<div class="mx-4 mb-4 p-4 rounded-xl bg-primary/10 border-l-4 border-primary relative overflow-hidden">
+<span class="absolute right-2 top-2 text-primary/20">
+<span class="material-symbols-outlined text-4xl">format_quote</span>
+</span>
+<p class="text-sm font-medium text-slate-900 dark:text-white relative z-10 italic">
+                            "No os ha sobrevenido ninguna tentación que no sea humana; pero fiel es Dios, que no os dejará ser tentados más de lo que podéis resistir, sino que dará también juntamente con la tentación la salida, para que podáis soportar."
+                        </p>
+<p class="text-xs font-bold text-primary mt-2 uppercase tracking-wide">1 Corintios 10:13</p>
+</div>
+<div class="px-4 pb-4 flex gap-2">
+<button class="text-xs font-medium px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition text-slate-600 dark:text-slate-300">
+                            🙏 Oremos juntos
+                         </button>
+<button class="text-xs font-medium px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition text-slate-600 dark:text-slate-300">
+                            📖 Leer más
+                         </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Input Area -->
+<footer class="p-4 bg-background-light dark:bg-background-dark shrink-0">
+<div class="max-w-4xl mx-auto flex items-end gap-2 bg-white dark:bg-surface-dark p-2 rounded-3xl shadow-lg ring-1 ring-slate-200 dark:ring-slate-800">
+<button aria-label="Añadir adjunto" class="p-2.5 rounded-full text-slate-400 hover:text-primary hover:bg-primary/10 transition-colors shrink-0">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<div class="flex-1 py-2.5 min-h-[44px]">
+<textarea class="w-full bg-transparent border-0 p-0 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-0 resize-none text-base leading-6 max-h-32 overflow-y-auto" placeholder="Escribe un mensaje..." rows="1"></textarea>
+</div>
+<button aria-label="Grabar audio" class="p-2.5 rounded-full text-slate-400 hover:text-primary hover:bg-primary/10 transition-colors shrink-0">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button aria-label="Enviar mensaje" class="p-2.5 bg-primary hover:bg-primary-dark text-background-dark rounded-full transition-all duration-200 shadow-md shrink-0 flex items-center justify-center transform active:scale-95">
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1">send</span>
+</button>
+</div>
+<div class="h-1 w-1/3 mx-auto bg-slate-300 dark:bg-slate-800 rounded-full mt-4"></div>
+</footer>
+</body></html>

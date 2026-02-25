@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding Bienvenida Senda</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .gradient-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex items-center justify-center p-0 m-0">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Header/Status bar area placeholder -->
+<div class="absolute top-0 w-full z-10 flex justify-between items-center px-6 py-4">
+<span class="material-symbols-outlined text-slate-900 dark:text-white opacity-80" style="font-size: 20px;">signal_cellular_alt</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-slate-900 dark:text-white opacity-80" style="font-size: 20px;">wifi</span>
+<span class="material-symbols-outlined text-slate-900 dark:text-white opacity-80" style="font-size: 20px;">battery_full</span>
+</div>
+</div>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col relative">
+<!-- Hero Image Section with Gradient Overlay -->
+<div class="relative w-full h-[65vh] overflow-hidden rounded-b-[2rem]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105" data-alt="Abstract light rays through deep darkness spiritual concept" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGV-h0w1cPRMgNUhcCmsYAhdHiJGWp7FO8yhGqfjIDlUCt9yNjJP2yM5hGTzK0t2ZLmYfjDvJTvJyOizfxQv1nohGoaML5K77vK6UqA7pu3srmrOsvrU9bvpL0QJF1XVg4IDQtbmkms0GaGOM4F-Aj6opWaym4fsUDs2sWj36GTghOl3qI8JhJcqr4Sh6Wvk318J8MCGnLr02r1VUCT8p99mWEmkSMKihSCMbwZxi6lj1-2eIprLH-vxZuDrJ7C7OpiDyq_FudIMZ9");'></div>
+<!-- Gradient overlay for text readability and aesthetic blending -->
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent"></div>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<!-- Content Container -->
+<div class="flex-1 flex flex-col justify-end px-6 pb-10 -mt-20 z-10">
+<!-- Logo / Icon -->
+<div class="flex justify-center mb-8">
+<div class="w-16 h-16 rounded-2xl bg-slate-800/80 backdrop-blur-md border border-slate-700 flex items-center justify-center shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-primary text-4xl">hiking</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="space-y-4 text-center mb-8">
+<h1 class="text-slate-900 dark:text-white text-4xl font-bold tracking-tight leading-tight">
+                        Tu camino hacia <span class="text-primary">la libertad</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-light leading-relaxed max-w-xs mx-auto">
+                        Senda te acompaña en tu viaje de recuperación y crecimiento espiritual.
+                    </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4 w-full">
+<button class="relative w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-8 bg-primary hover:bg-primary/90 transition-colors duration-200 group">
+<span class="relative z-10 text-background-dark text-lg font-bold tracking-wide flex items-center justify-center gap-2">
+                            Comenzar
+                            <span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</span>
+</button>
+<button class="w-full cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-transparent text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-slate-900 dark:hover:text-white transition-colors">
+                        Ya tengo una cuenta
+                    </button>
+</div>
+<!-- Indicators -->
+<div class="flex justify-center gap-2 mt-8">
+<div class="w-8 h-1.5 rounded-full bg-primary"></div>
+<div class="w-2 h-1.5 rounded-full bg-slate-700"></div>
+<div class="w-2 h-1.5 rounded-full bg-slate-700"></div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

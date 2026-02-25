@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Senda - Modo Crisis</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "secondary": "#a855f7", // Adding a violet for the requested gradient
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                        "surface-dark": "#162a2e",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<div class="flex items-center px-4 py-3 justify-between bg-transparent relative z-10">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-white/10 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined !text-[24px]">close</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Modo Crisis</h2>
+<button class="flex items-center justify-end px-2 py-1 rounded hover:bg-white/10">
+<p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0">Salir</p>
+</button>
+</div>
+<!-- Main Content Container -->
+<main class="flex-1 flex flex-col items-center justify-center px-6 pb-8 relative w-full max-w-md mx-auto">
+<!-- Abstract Background Glow -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
+<div class="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-64 h-64 bg-secondary/10 rounded-full blur-[80px] pointer-events-none z-0"></div>
+<!-- Hero Section: Help Button -->
+<div class="flex flex-col items-center justify-center w-full z-10 mb-12 mt-4">
+<div class="mb-6 relative group">
+<!-- Outer Glow Ring -->
+<div class="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-primary rounded-full blur opacity-40 group-hover:opacity-60 transition duration-1000 animate-pulse"></div>
+<!-- Main Button -->
+<button class="relative flex flex-col items-center justify-center w-48 h-48 rounded-full bg-gradient-to-b from-[#1a3b42] to-[#0f1d20] border-4 border-primary/30 shadow-[0_0_40px_rgba(19,200,236,0.3)] active:scale-95 transition-transform duration-200">
+<div class="bg-gradient-to-br from-primary to-secondary text-transparent bg-clip-text">
+<span class="material-symbols-outlined !text-[64px] text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">notifications_active</span>
+</div>
+<span class="mt-2 text-white font-bold text-sm tracking-widest uppercase">SOS</span>
+</button>
+</div>
+<h1 class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight text-center mb-2">Botón de Auxilio</h1>
+<p class="text-slate-500 dark:text-slate-400 text-center max-w-[280px]">Pulsa el botón si necesitas ayuda inmediata de tu comunidad o mentor.</p>
+</div>
+<!-- Action Plan Section -->
+<div class="w-full z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="h-px flex-1 bg-slate-200 dark:bg-slate-700"></span>
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Plan de 5 Minutos</span>
+<span class="h-px flex-1 bg-slate-200 dark:bg-slate-700"></span>
+</div>
+<div class="space-y-4">
+<!-- Step 1: Breathe -->
+<div class="bg-white dark:bg-surface-dark rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-200 dark:border-slate-800/50">
+<div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined">air</span>
+</div>
+<div class="flex-1">
+<h3 class="text-slate-900 dark:text-white font-bold text-lg">1. Respira</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Inhala profundamente, sostén y exhala.</p>
+</div>
+<span class="text-2xl font-bold text-slate-200 dark:text-slate-700">01</span>
+</div>
+<!-- Step 2: Pray -->
+<div class="bg-white dark:bg-surface-dark rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-200 dark:border-slate-800/50">
+<div class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary shrink-0">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div class="flex-1">
+<h3 class="text-slate-900 dark:text-white font-bold text-lg">2. Ora</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Entrega este momento a Dios.</p>
+</div>
+<span class="text-2xl font-bold text-slate-200 dark:text-slate-700">02</span>
+</div>
+<!-- Step 3: Call -->
+<div class="bg-white dark:bg-surface-dark rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-200 dark:border-slate-800/50">
+<div class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-500 shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div class="flex-1">
+<h3 class="text-slate-900 dark:text-white font-bold text-lg">3. Llama</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Contacta a tu aliado de confianza.</p>
+</div>
+<span class="text-2xl font-bold text-slate-200 dark:text-slate-700">03</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Optional subtle bottom branding or decorative element -->
+<div class="w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+</body></html>
