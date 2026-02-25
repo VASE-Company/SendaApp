@@ -42,6 +42,9 @@ export default function Page() {
         {screens.map((n) => (
           <article key={n} className={s.card}>
             <div className={s.meta}>Pantalla {n}</div>
+            <a href={`/stitch/${n}`} style={{ color: '#9bd8ff', textDecoration: 'none', fontWeight: 700 }}>
+              Abrir como página independiente →
+            </a>
             <iframe className={s.frame} src={`/stitch/senda${n}.html`} title={`Senda Stitch ${n}`} loading="lazy" />
           </article>
         ))}
