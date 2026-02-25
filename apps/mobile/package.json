@@ -1,0 +1,31 @@
+{
+  "name": "@senda/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "expo start",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.6.1",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/native-stack": "^6.11.0",
+    "@senda/shared": "0.1.0",
+    "expo": "^52.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.3",
+    "react-native-safe-area-context": "^4.12.0",
+    "react-native-screens": "^3.34.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-react": "^7.37.2",
+    "typescript": "^5.6.3"
+  }
+}
+

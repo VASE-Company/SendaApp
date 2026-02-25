@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Senda",
+    "slug": "senda",
+    "scheme": "senda",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark"
+  }
+}
