@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import gsap from 'gsap';
 import { supabaseBrowser } from '../../../lib/supabase-browser';
 
 export default function LoginPage() {
@@ -10,6 +11,10 @@ export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [msg, setMsg] = useState('');
+
+  useEffect(() => {
+    gsap.fromTo('.rb-auth', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' });
+  }, []);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -21,7 +26,7 @@ export default function LoginPage() {
 
   return (
     <main style={page}>
-      <form onSubmit={onSubmit} style={card}>
+      <form onSubmit={onSubmit} style={card} className="rb-auth">
         <p style={eyebrow}>PASO 3/3</p>
         <h1 style={title}>Iniciar sesión</h1>
         <p style={sub}>Entrá para seguir con Dashboard, Crisis, Chat y Tracking.</p>
