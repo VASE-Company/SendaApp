@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { mockDashboard, mockTracking, mockAccountability } from '@senda/shared';
+import { mockDashboard, mockTracking, mockAccountability } from '../lib/mockData';
 import { hasSupabaseEnv, getSupabaseServiceClient } from '../lib/supabase';
 
 type HabitRow = { id: string; label: string; done: boolean };
