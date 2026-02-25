@@ -1,39 +1,118 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main style={{ minHeight: '100vh', background: '#0b1118', color: '#e8f0ff', padding: 16 }}>
-      <div style={{ maxWidth: 900, margin: '0 auto', display: 'grid', gap: 12 }}>
-        <h1 style={{ margin: 0 }}>Senda · Onboarding</h1>
-        <p style={{ opacity: 0.8, margin: 0 }}>Base visual Stitch + flujo funcional.</p>
+    <main style={page}>
+      <div style={desktopWrap}>
+        <section style={leftCopy}>
+          <p style={eyebrow}>SENDA · ONBOARDING</p>
+          <h1 style={title}>Recuperá enfoque, paz y propósito.</h1>
+          <p style={desc}>
+            Un sistema diario para hábitos saludables, pureza digital y apoyo en momentos críticos.
+          </p>
+          <ul style={list}>
+            <li>✓ Check-ins y rachas</li>
+            <li>✓ Modo crisis en 1 toque</li>
+            <li>✓ Accountability con persona de confianza</li>
+          </ul>
+        </section>
 
-        <iframe
-          src="/stitch/senda1.html"
-          title="Senda Onboarding"
-          style={{ width: '100%', height: '78vh', border: 0, borderRadius: 14, background: '#fff' }}
-        />
+        <section style={phoneFrame}>
+          <div style={statusBar}>
+            <span>9:41</span>
+            <span>•••</span>
+          </div>
 
-        <div style={{ display: 'flex', gap: 10 }}>
-          <Link href="/auth/signup" style={btnPrimary}>Continuar</Link>
-          <Link href="/auth/login" style={btn}>Ya tengo cuenta</Link>
-        </div>
+          <div style={heroImgWrap}>
+            <Image src="/sendaapplogo.png" alt="Senda" width={180} height={180} style={{ borderRadius: 28 }} />
+          </div>
+
+          <h2 style={phoneTitle}>Bienvenido a Senda</h2>
+          <p style={phoneDesc}>
+            Tu compañero diario para fortalecer hábitos y mantener claridad cuando más la necesitás.
+          </p>
+
+          <div style={dots}>
+            <span style={dotActive} />
+            <span style={dot} />
+            <span style={dot} />
+          </div>
+
+          <div style={{ marginTop: 'auto', display: 'grid', gap: 10 }}>
+            <Link href="/auth/signup" style={btnPrimary}>Continuar</Link>
+            <Link href="/auth/login" style={btnGhost}>Ya tengo cuenta</Link>
+          </div>
+        </section>
       </div>
     </main>
   );
 }
 
-const btn: React.CSSProperties = {
-  textDecoration: 'none',
-  color: '#dbe7ff',
-  border: '1px solid #33445f',
-  borderRadius: 10,
-  padding: '10px 14px'
+const page: React.CSSProperties = {
+  minHeight: '100vh',
+  background: 'radial-gradient(circle at 20% -20%, #1f3f47 0%, #101f22 45%, #0d1619 100%)',
+  color: '#e9f4f7',
+  display: 'grid',
+  placeItems: 'center',
+  padding: 16,
+  fontFamily: 'Inter, system-ui, sans-serif'
 };
+const desktopWrap: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 1120,
+  display: 'grid',
+  gap: 28,
+  gridTemplateColumns: '1fr minmax(320px,420px)',
+  alignItems: 'center'
+};
+const leftCopy: React.CSSProperties = { display: 'grid', gap: 12 };
+const eyebrow: React.CSSProperties = { margin: 0, letterSpacing: '0.12em', color: '#8ab4bf', fontSize: 12 };
+const title: React.CSSProperties = { margin: 0, fontSize: 'clamp(1.8rem,4vw,3.1rem)', lineHeight: 1.02 };
+const desc: React.CSSProperties = { margin: 0, color: '#b8d0d7', maxWidth: 560 };
+const list: React.CSSProperties = { margin: 0, paddingLeft: 18, lineHeight: 1.8, color: '#c8dde3' };
+
+const phoneFrame: React.CSSProperties = {
+  minHeight: 720,
+  borderRadius: 30,
+  border: '1px solid #2d4a51',
+  background: 'linear-gradient(180deg,#13272b,#101f22)',
+  boxShadow: '0 30px 60px rgba(0,0,0,.4)',
+  padding: 18,
+  display: 'grid',
+  gap: 12
+};
+const statusBar: React.CSSProperties = { display: 'flex', justifyContent: 'space-between', fontSize: 12, color: '#a8c3ca' };
+const heroImgWrap: React.CSSProperties = {
+  marginTop: 8,
+  height: 240,
+  borderRadius: 22,
+  background: 'radial-gradient(circle at 60% 20%, rgba(19,200,236,.45), rgba(139,92,246,.2) 55%, rgba(255,255,255,0) 72%)',
+  display: 'grid',
+  placeItems: 'center'
+};
+const phoneTitle: React.CSSProperties = { margin: 0, fontSize: 30, lineHeight: 1.03 };
+const phoneDesc: React.CSSProperties = { margin: 0, color: '#b1ccd3' };
+const dots: React.CSSProperties = { display: 'flex', gap: 8, marginTop: 4 };
+const dot: React.CSSProperties = { width: 8, height: 8, borderRadius: 999, background: '#35575f' };
+const dotActive: React.CSSProperties = { ...dot, background: '#13c8ec', width: 24 };
 
 const btnPrimary: React.CSSProperties = {
-  ...btn,
-  background: 'linear-gradient(90deg,#13c8ec,#8b5cf6)',
-  color: '#071117',
+  textDecoration: 'none',
+  borderRadius: 12,
   border: 'none',
+  padding: '12px 14px',
+  textAlign: 'center',
+  background: 'linear-gradient(90deg,#13c8ec,#8b5cf6)',
+  color: '#06171b',
   fontWeight: 700
+};
+const btnGhost: React.CSSProperties = {
+  textDecoration: 'none',
+  borderRadius: 12,
+  border: '1px solid #39545b',
+  padding: '12px 14px',
+  textAlign: 'center',
+  color: '#cfe2e8',
+  fontWeight: 600
 };

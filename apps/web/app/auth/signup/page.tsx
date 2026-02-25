@@ -13,37 +13,39 @@ export default function SignupPage() {
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!supabaseBrowser) {
-      setMsg('Faltan variables de Supabase en el deploy.');
-      return;
-    }
-
+    if (!supabaseBrowser) return setMsg('Falta configurar Supabase.');
     const { error } = await supabaseBrowser.auth.signUp({ email, password });
-    if (error) {
-      setMsg(error.message);
-      return;
-    }
-
-    setMsg('Cuenta creada. Si pide confirmación por email, confirmá y luego iniciá sesión.');
+    if (error) return setMsg(error.message);
     router.push('/auth/login');
   }
 
   return (
-    <main style={wrap}>
+    <main style={page}>
       <form onSubmit={onSubmit} style={card}>
-        <h1>Crear cuenta</h1>
-        <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} style={input} required />
-        <input placeholder="Contraseña" type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={input} required minLength={6} />
-        <button style={primary}>Continuar</button>
-        <p style={{ opacity: 0.8 }}>{msg}</p>
+        <p style={eyebrow}>PASO 2/3</p>
+        <h1 style={title}>Crear cuenta</h1>
+        <p style={sub}>Usá tu email para comenzar el camino en Senda.</p>
+
+        <label style={label}>Email</label>
+        <input required type="email" value={email} onChange={(e) => setEmail(e.target.value)} style={input} placeholder="tu@email.com" />
+
+        <label style={label}>Contraseña</label>
+        <input required minLength={6} type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={input} placeholder="••••••••" />
+
+        <button style={btnPrimary}>Continuar</button>
+        <p style={{ color: '#ffb8b8', minHeight: 20, margin: 0 }}>{msg}</p>
         <Link href="/auth/login" style={link}>Ya tengo cuenta</Link>
       </form>
     </main>
   );
 }
 
-const wrap: React.CSSProperties = { minHeight: '100vh', display: 'grid', placeItems: 'center', background: '#0b1118', color: '#e8f0ff' };
-const card: React.CSSProperties = { width: 360, background: '#121b2b', border: '1px solid #2a3953', borderRadius: 14, padding: 20, display: 'grid', gap: 10 };
-const input: React.CSSProperties = { background: '#0f1726', border: '1px solid #33445f', borderRadius: 10, color: '#e8f0ff', padding: '10px 12px' };
-const primary: React.CSSProperties = { border: 'none', borderRadius: 10, padding: '10px 12px', background: 'linear-gradient(90deg,#13c8ec,#8b5cf6)', color: '#06131a', fontWeight: 700 };
+const page: React.CSSProperties = { minHeight: '100vh', display: 'grid', placeItems: 'center', background: '#101f22', padding: 16, color: '#e9f4f7', fontFamily: 'Inter, system-ui' };
+const card: React.CSSProperties = { width: 'min(420px,100%)', background: '#13282d', border: '1px solid #2f4b52', borderRadius: 18, padding: 20, display: 'grid', gap: 10 };
+const eyebrow: React.CSSProperties = { margin: 0, fontSize: 12, color: '#8ab4bf', letterSpacing: '0.1em' };
+const title: React.CSSProperties = { margin: 0, fontSize: 30 };
+const sub: React.CSSProperties = { margin: 0, color: '#b5ced5' };
+const label: React.CSSProperties = { fontSize: 13, color: '#bfd6dc', marginTop: 4 };
+const input: React.CSSProperties = { background: '#0f1d21', border: '1px solid #34545c', borderRadius: 10, color: '#e9f4f7', padding: '11px 12px' };
+const btnPrimary: React.CSSProperties = { marginTop: 8, border: 'none', borderRadius: 12, padding: '12px 14px', background: 'linear-gradient(90deg,#13c8ec,#8b5cf6)', color: '#07191e', fontWeight: 700 };
 const link: React.CSSProperties = { color: '#9bd8ff', textDecoration: 'none', fontSize: 14 };
