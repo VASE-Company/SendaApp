@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16439c",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0a0b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .grayscale-filter {
+            filter: grayscale(100%);
+        }
+        .hover-reveal:hover .grayscale-filter {
+            filter: grayscale(0%);
+            transition: filter 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-12 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">lens_blur</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-extrabold tracking-tighter uppercase">Monochrome Archive</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Portfolios</a>
+<a class="text-xs font-bold uppercase tracking-widest text-primary" href="#">Projects</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Archive</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Journal</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button class="bg-primary text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        Contact
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section: Full-Bleed Cinematic -->
+<section class="w-full h-[85vh] relative overflow-hidden">
+<div class="absolute inset-0 grayscale-filter bg-cover bg-center" data-alt="Monochrome wide shot of a brutalist concrete building against a stark sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVY_iZpelJrPv7XLNYzt2rjuF0Ehs4PYrm1dBRjYKXfef0lWvGYLM-42xomJ6sGjFSWghOsGMwhAC1KAqI5Yyhgsj2xf5mwQvLOVtHXxKb5Pwu5Bow8jNiD7dUZkdl55v0hT-F1Qx287bl7G9zLzAi_XcHw_rtKfTbTYH7XNkyYij4ou44Pj5tsYBiYAW7rSWKgvm5BF2RhGWmV4ufHYcnEVgCSGLyYRBndKtooKzd8KQW9TgQXnPyeQAwhuMhioRuEIipA2Z4mTVl')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-12 left-6 md:left-24 max-w-2xl">
+<span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4 block">Series 04</span>
+<h2 class="text-5xl md:text-7xl font-light text-white leading-tight mb-6">Silent Structures</h2>
+<p class="text-slate-300 text-lg font-light max-w-lg">An exploration of geometry, shadow, and the permanence of concrete in an ever-shifting urban landscape.</p>
+</div>
+</section>
+<!-- Metadata & Narrative Column Layout -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Sidebar Metadata -->
+<aside class="lg:col-span-4 space-y-12 order-2 lg:order-1">
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8">
+<h4 class="text-[10px] uppercase tracking-[0.4em] text-slate-400 mb-6 font-bold">Specifications</h4>
+<div class="space-y-6">
+<div class="flex justify-between items-end border-b border-slate-100 dark:border-slate-900 pb-2">
+<span class="text-xs text-slate-500 font-medium">Camera</span>
+<span class="text-sm font-bold">Leica M11 Monochrom</span>
+</div>
+<div class="flex justify-between items-end border-b border-slate-100 dark:border-slate-900 pb-2">
+<span class="text-xs text-slate-500 font-medium">Lens</span>
+<span class="text-sm font-bold">Summilux-M 35mm f/1.4</span>
+</div>
+<div class="flex justify-between items-end border-b border-slate-100 dark:border-slate-900 pb-2">
+<span class="text-xs text-slate-500 font-medium">Location</span>
+<span class="text-sm font-bold" data-location="Berlin, Germany">Berlin, Germany</span>
+</div>
+<div class="flex justify-between items-end border-b border-slate-100 dark:border-slate-900 pb-2">
+<span class="text-xs text-slate-500 font-medium">Year</span>
+<span class="text-sm font-bold">2023 - 2024</span>
+</div>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-900/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary mb-4">format_quote</span>
+<p class="italic text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            "The absence of color allows the texture of the city to speak. In the grey, we find the truth of the form."
+                        </p>
+</div>
+</aside>
+<!-- Narrative Content -->
+<article class="lg:col-span-8 order-1 lg:order-2">
+<div class="max-w-2xl">
+<h3 class="text-2xl font-semibold mb-8 text-slate-900 dark:text-white">The Narrative of Absence</h3>
+<div class="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-loose font-light">
+<p>
+                                This series explores the intersection of brutalist architecture and the fleeting nature of light. Captured over three months, the narrative follows the silent dialogue between concrete structures and the evolving shadows of the winter solstice. 
+                            </p>
+<p>
+                                Every frame is a study in texture, contrast, and the absolute absence of color. By removing the distraction of hue, the viewer is forced to confront the geometry of the urban environment. The project aims to reduce Berlin's modernist heritage to its most fundamental forms—lines, curves, and the deep, rich blacks of midday shadows.
+                            </p>
+<p>
+                                Working exclusively with the Leica M11 Monochrom, the sensor's native ability to capture luminosity levels without an interpolating Bayer filter results in a clarity that mirrors the clinical honesty of the architecture itself.
+                            </p>
+</div>
+</div>
+</article>
+</section>
+<!-- Deep Scroll Experience: Interspersed Images and Floating Text -->
+<section class="pb-24 space-y-32">
+<!-- Image 1: Vertical Offset -->
+<div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-12 gap-8 items-center">
+<div class="col-span-12 md:col-span-7 grayscale-filter overflow-hidden rounded-xl bg-slate-900">
+<img class="w-full h-auto hover:scale-105 transition-transform duration-700" data-alt="Black and white close up of concrete texture and sharp architectural shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnBZXPQAEX-IF0OBACqCw8Zg9LL8QxV11Q430E9dAftjEEGCtro-Q4D7og7pImN8Hl4Qu9sZNi1_a4fU820Ee60ktpWjYltIP4C8YKgj1NLeHiV6Q-tZX7WC64d1vGsMyM9j3ymvrXSGVTcXG2jK_3jodJEP4WBI7UZmNxH7Md5he-dkfHdkv0v-ysoABfwB-xIxj8C7K8vNUonpoGGun9RyMakfq-2LrWE5qxe6mDHe594H_jU-uVqg82ckWWhjW3KvJFMJQkGT1C"/>
+</div>
+<div class="col-span-12 md:col-span-4 md:col-start-9">
+<span class="text-[10px] uppercase tracking-[0.5em] text-primary font-bold mb-4 block">Fragment 01</span>
+<h4 class="text-xl font-medium text-slate-900 dark:text-white leading-snug">
+                            The weight of concrete is felt most in the spaces it leaves empty.
+                        </h4>
+</div>
+</div>
+<!-- Image 2: Wide Full Layout -->
+<div class="w-full px-6 md:px-24">
+<div class="relative group cursor-crosshair">
+<div class="grayscale-filter overflow-hidden rounded-2xl aspect-[21/9] bg-slate-900 shadow-2xl transition-all duration-500 group-hover:grayscale-0">
+<img class="w-full h-full object-cover" data-alt="Panoramic monochrome view of a modular concrete apartment complex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoB4CS7FvqnS8Dp6_95ET29khNoayUJ0Rg2PjCVH5w3WFgKq_etnwO2ZZPH39WVxs3Jf9YsrTS25QVsapbep9o7_4zsMJq6q-caaZ8EuL4l7jAWc-p18_-caUapam8jkVpey9Bg0VfpJoqqeEMDPBYDBma6xmy_-9hVzLKl1jVfPvny0CoJV6Z36iJqSyrtSIzmxJb8GK904mDjsZchlvR5k472E-jjCaH115rBtF2R5TCTZWM6aOu7RatTAcvDlUXtTFO7gDnqUdC"/>
+</div>
+<div class="absolute -bottom-8 right-12 bg-background-light dark:bg-background-dark p-6 border border-slate-200 dark:border-slate-800 shadow-xl max-w-xs rounded-lg">
+<p class="text-sm font-light text-slate-500 italic">
+                                "The repetition of windows creates a visual rhythm that borders on the musical."
+                            </p>
+</div>
+</div>
+</div>
+<!-- Image 3: Double Grid -->
+<div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-6">
+<div class="grayscale-filter rounded-xl overflow-hidden aspect-square bg-slate-900">
+<img class="w-full h-full object-cover" data-alt="Vertical monochrome shot of a staircase spiral in a brutalist building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAneUnpQOATjaf5zJNm5OR-AWp6dXgiP42dov8-M_Aa8fZNGYwTszV9ACKRHwsFHAm3H5zVJh-FXs985KOYcfI9MaMzWF6uQBL9jR2M3ZCuqlnsdvf_MuVK8vnQJ2g9Ukm2jupnwC91p_dyp4eMP-frQUnrpOs3LdzR9KDq3ehXka1ZzTvFog4ANP9OC22rLR6jfFPujLp44ECYE1IzbZAs1S72z4JT02yyjgwlkMBenmSUVIq0Xg0uH4qWPK7m6biGtQGiCWpeu5wC"/>
+</div>
+<p class="text-xs text-slate-400 uppercase tracking-widest text-center">Spiral Ascent, Detail IV</p>
+</div>
+<div class="flex flex-col justify-center space-y-12">
+<div class="max-w-sm">
+<span class="text-[10px] uppercase tracking-[0.5em] text-primary font-bold mb-6 block">Fragment 02</span>
+<p class="text-2xl font-light text-slate-800 dark:text-slate-200 leading-relaxed italic">
+                                "Light does not just illuminate these buildings; it defines them. Without shadow, there is no depth. Without depth, there is no story."
+                            </p>
+</div>
+<div class="grayscale-filter rounded-xl overflow-hidden aspect-[4/3] bg-slate-900">
+<img class="w-full h-full object-cover" data-alt="Angular monochrome shot of a modern roofline against a dark sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoP3CvWFthcwypJdtXIWiD22U_9d-hsotmcNU9s1FPbAgt9LUsTVEGU4_5adF7OoHC-H2BmJYkd--9rZmIsiOg3WylbGQTsQrFS0vvNr60Tq1IWL9G78NEycUbMk7qd7u6c_h0KR9Epo1c9boNVePlXrGWF1RPp08FTjB3HmtvwtltedkA2UnL4fVZd3gMNMmogqjsvs7h0uqv_MMCMtSfsV5vZ-pFc09YSMIyDLq-3VO-XyJk9AvIEAm0_Kqcp6zY4wC3oQt5-v0f"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Section / Call to Action -->
+<section class="border-t border-slate-200 dark:border-slate-800 py-24 px-6">
+<div class="max-w-4xl mx-auto text-center space-y-12">
+<h3 class="text-4xl font-light">Continue the Journey</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<a class="group block relative overflow-hidden rounded-xl aspect-video bg-slate-900 grayscale-filter hover:grayscale-0 transition-all duration-500" href="#">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Dark monochrome city skyline at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGyjE6ixN66hjvyAIC04Wl9plienfOzp2BRvR64RSRDMRlyN31KrlY4FrriSJrP8_WY9garVr72_OwNQeKFiIcR6KhE5xGKd6rWm0P-W3dtr_4D-ItC_TYcocjgf2cjaHjDo3v97PaXqEr3eqtrvM2qyP5BVxptNS0NpPox76S8RIklOk1xI3lFFTScTvCB3eAJHpd_6lYQUEzsBcZZAjf0BWOyAjNQPchNcmt3pd81GMy14xtNtpMgmSD90a0mzdICCL98GRpURiw"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-white text-xs font-bold uppercase tracking-[0.4em] z-10">Previous: Night City</span>
+</div>
+</a>
+<a class="group block relative overflow-hidden rounded-xl aspect-video bg-slate-900 grayscale-filter hover:grayscale-0 transition-all duration-500" href="#">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Monochrome image of misty mountains and forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8TQ6HWL1iyKQOQZZYAR7YEWCtO5wpDZk8rVO0AUb9DHJJpB1JA77ux2KZjEF00Qk9oCXUrcH182bo078U3lScTJu38X7nykxkSwHzeRsX9xtmkP84feu9di2WvjqPXdT_aA5rUzMO5_vppCe30gYuwpaaHcZosA9n8yUwRzCkimt895rRfUH6vwZhkd1wIDmIeKj5pC1HapmmDaz__CcYNnNxW2AfJE-rUJRI8y9zjc-BLNILMS4IbxQ6qmjyhuIGaVKXU6LggYdG"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-white text-xs font-bold uppercase tracking-[0.4em] z-10">Next: The Void Above</span>
+</div>
+</a>
+</div>
+<div class="pt-12">
+<button class="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.4em] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+                            Back to Portfolio
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Footer -->
+<footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 py-12 px-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 grayscale opacity-70">
+<div class="text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">lens_blur</span>
+</div>
+<h2 class="text-sm font-bold tracking-tighter uppercase">Monochrome Archive</h2>
+</div>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">
+                    © 2024 Editorial Photography &amp; Design. All rights reserved.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

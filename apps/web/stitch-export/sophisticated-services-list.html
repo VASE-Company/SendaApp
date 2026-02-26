@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sophisticated Services | Lumière Photography</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16439c",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0a0b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .hairline-border { border-color: rgba(255, 255, 255, 0.1); }
+        .service-item:hover .service-arrow { transform: translateX(10px); opacity: 1; }
+        .service-arrow { transition: all 0.3s ease; opacity: 0.3; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b hairline-border px-8 lg:px-20 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">filter_vintage</span>
+<h1 class="text-xl font-bold tracking-tighter uppercase">Lumière</h1>
+</div>
+<nav class="hidden md:flex items-center gap-12">
+<a class="text-xs font-semibold uppercase tracking-[0.2em] hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-xs font-semibold uppercase tracking-[0.2em] text-primary" href="#">Services</a>
+<a class="text-xs font-semibold uppercase tracking-[0.2em] hover:text-primary transition-colors" href="#">Process</a>
+<a class="text-xs font-semibold uppercase tracking-[0.2em] hover:text-primary transition-colors" href="#">Inquiry</a>
+</nav>
+<button class="bg-primary text-white text-xs font-bold uppercase tracking-widest px-8 py-3 rounded-full hover:bg-primary/90 transition-all">
+                Book Session
+            </button>
+</header>
+<main class="flex-1 pt-40 pb-20 px-8 lg:px-20 max-w-[1440px] mx-auto w-full">
+<div class="mb-24">
+<span class="text-primary text-xs font-bold uppercase tracking-[0.4em] block mb-4">Commissions &amp; Packages</span>
+<h2 class="text-5xl lg:text-7xl font-extralight tracking-tighter max-w-3xl leading-tight">
+                    Crafting <span class="italic">visual narratives</span> through technical precision and editorial vision.
+                </h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-8 flex flex-col">
+<details class="group hairline-border border-t" open="">
+<summary class="service-item flex cursor-pointer items-center justify-between py-12 list-none">
+<div class="flex items-baseline gap-8">
+<span class="text-sm font-light opacity-40">01</span>
+<h3 class="text-4xl lg:text-6xl font-light tracking-tight group-hover:italic transition-all uppercase">Editorial</h3>
+</div>
+<span class="service-arrow material-symbols-outlined text-4xl hidden md:block">arrow_forward</span>
+</summary>
+<div class="pb-12 pl-12 md:pl-24 max-w-2xl">
+<p class="text-lg text-slate-400 font-light leading-relaxed mb-8">
+                                High-concept visual storytelling for global publications and independent zines. Our editorial service covers creative direction, location scouting, and high-end retouching tailored for print.
+                            </p>
+<div class="flex flex-wrap gap-12 border-l hairline-border pl-8">
+<div>
+<span class="block text-[10px] uppercase tracking-widest opacity-50 mb-2">Starting from</span>
+<span class="text-2xl font-light">$3,200</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest opacity-50 mb-2">Duration</span>
+<span class="text-2xl font-light">Full Day</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest opacity-50 mb-2">Deliverables</span>
+<span class="text-2xl font-light">12 Retouched</span>
+</div>
+</div>
+</div>
+</details>
+<details class="group hairline-border border-t">
+<summary class="service-item flex cursor-pointer items-center justify-between py-12 list-none">
+<div class="flex items-baseline gap-8">
+<span class="text-sm font-light opacity-40">02</span>
+<h3 class="text-4xl lg:text-6xl font-light tracking-tight group-hover:italic transition-all uppercase">Commercial</h3>
+</div>
+<span class="service-arrow material-symbols-outlined text-4xl hidden md:block">arrow_forward</span>
+</summary>
+<div class="pb-12 pl-12 md:pl-24 max-w-2xl">
+<p class="text-lg text-slate-400 font-light leading-relaxed mb-8">
+                                Brand-centric photography designed to elevate your commercial presence. We focus on product integration and lifestyle narratives that resonate with modern consumers.
+                            </p>
+<div class="flex flex-wrap gap-12 border-l hairline-border pl-8">
+<div>
+<span class="block text-[10px] uppercase tracking-widest opacity-50 mb-2">Starting from</span>
+<span class="text-2xl font-light">$4,500</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest opacity-50 mb-2">Licensing</span>
+<span class="text-2xl font-light">Global / 2yr</span>
+</div>
+</div>
+</div>
+</details>
+<details class="group hairline-border border-t">
+<summary class="service-item flex cursor-pointer items-center justify-between py-12 list-none">
+<div class="flex items-baseline gap-8">
+<span class="text-sm font-light opacity-40">03</span>
+<h3 class="text-4xl lg:text-6xl font-light tracking-tight group-hover:italic transition-all uppercase">Portraiture</h3>
+</div>
+<span class="service-arrow material-symbols-outlined text-4xl hidden md:block">arrow_forward</span>
+</summary>
+<div class="pb-12 pl-12 md:pl-24 max-w-2xl">
+<p class="text-lg text-slate-400 font-light leading-relaxed mb-8">
+                                Intimate and architectural portraits for artists, executives, and public figures. A focused session designed to capture the nuance of character in a minimalist setting.
+                            </p>
+<div class="flex flex-wrap gap-12 border-l hairline-border pl-8">
+<div>
+<span class="block text-[10px] uppercase tracking-widest opacity-50 mb-2">Starting from</span>
+<span class="text-2xl font-light">$1,800</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest opacity-50 mb-2">Location</span>
+<span class="text-2xl font-light">Studio Only</span>
+</div>
+</div>
+</div>
+</details>
+<details class="group hairline-border border-t border-b">
+<summary class="service-item flex cursor-pointer items-center justify-between py-12 list-none">
+<div class="flex items-baseline gap-8">
+<span class="text-sm font-light opacity-40">04</span>
+<h3 class="text-4xl lg:text-6xl font-light tracking-tight group-hover:italic transition-all uppercase">Brand Story</h3>
+</div>
+<span class="service-arrow material-symbols-outlined text-4xl hidden md:block">arrow_forward</span>
+</summary>
+<div class="pb-12 pl-12 md:pl-24 max-w-2xl">
+<p class="text-lg text-slate-400 font-light leading-relaxed mb-8">
+                                A comprehensive visual identity package. More than just a shoot—we build a consistent visual language for your brand's digital and physical ecosystem.
+                            </p>
+<div class="flex flex-wrap gap-12 border-l hairline-border pl-8">
+<div>
+<span class="block text-[10px] uppercase tracking-widest opacity-50 mb-2">Custom Quote</span>
+<span class="text-2xl font-light">Project-based</span>
+</div>
+</div>
+</div>
+</details>
+</div>
+<aside class="lg:col-span-4 flex flex-col gap-12">
+<div class="bg-primary/5 p-8 rounded-xl border hairline-border sticky top-32">
+<h4 class="text-xl font-medium mb-6">Our Workflow</h4>
+<div class="space-y-10">
+<div class="relative pl-8">
+<div class="absolute left-0 top-0 w-px h-full bg-primary/30"></div>
+<div class="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-primary"></div>
+<p class="text-sm font-bold uppercase tracking-widest text-primary mb-1">Consultation</p>
+<p class="text-sm text-slate-400">Alignment on creative direction, moodboards, and logistical requirements.</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-0 w-px h-full bg-primary/30"></div>
+<div class="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-primary"></div>
+<p class="text-sm font-bold uppercase tracking-widest text-primary mb-1">Production</p>
+<p class="text-sm text-slate-400">Meticulous execution on location or in-studio with full creative support.</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-primary"></div>
+<p class="text-sm font-bold uppercase tracking-widest text-primary mb-1">Curation</p>
+<p class="text-sm text-slate-400">Post-production refinement and high-end retouching for final delivery.</p>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t hairline-border">
+<p class="text-xs text-slate-400 mb-6 italic">Looking for something bespoke? We take a limited number of unique commissions each quarter.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline underline-offset-4" href="#">
+                                START A CONVERSATION
+                                <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+<section class="mt-40 grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="aspect-[4/5] bg-slate-800 relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Editorial fashion photography in high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMx7g8wgVY9Hwyv-cSRmdLk-2JEm39TqxFnxKmbS-FZ-pYrt8drL2lR6xBpw1DA-If46uElJHBThYRQ42slRhb7p2vas-9Hy5GSW9V_sl_ojvcCMkTwhcWJrcSRTUtDCdDFJuhK2PqmHs_ArVDBmJKPholhHO1w463mSc8-4xRB9FhH1YULgVrCt-zsCJJ1__udMlMsFxj0YBen-k_x7umIl977aCj2tzQvK2Pp6h2X4gS5amffynOGJBHJOHe16I-kk5Oz59eeMk2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+<span class="text-xs uppercase tracking-widest text-white/70">Recent Work / Editorial</span>
+</div>
+</div>
+<div class="aspect-[4/5] bg-slate-800 relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist camera equipment on a workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQr-ScFa_pJcs0Mz0ouQrnv9eTJfFTW5KGuZbt9AvzDXm4UTNlKF1kXyns44yEBSEoRQmg4xOLaQvl9KifFGOYQv4r5lM7T6fkzHD3b4-XvX7ZCjyCC6rv8toJqA49LOSWkOicWeABK2NaL4lVcJN2WpaVOjoQJFHCSqrs3SL8Ek8c7KCIBfYAx9KHuGD-m-OYfEsQmxtdErWV1MpBGZORpCcYf34LQC0YzePXZlAmzElyEiEjGY_Zi5DH8gbdE0cQv_qxOESDxZCr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+<span class="text-xs uppercase tracking-widest text-white/70">Studio / Equipment</span>
+</div>
+</div>
+<div class="aspect-[4/5] bg-slate-800 relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Fine art portrait of a woman in low light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7_DfwEhd6ErrSsZB1OhZmZ-bZDbZCPTTPjIQXNyckgkmWzjzI5mG44WqBa_k0nHMDr7wijjAtPeb38fEXdj2ECzK6IW4rolE4y_eqA0MA4e0HLTNjXr0FRoPUMAucHOfd7gJJOrXSA6KN4b7p5xm8v1QVsayC9iqAC_QPyiHH3N6IKPMDJc9czJjcG0MCOISvbv4xUvatQOlHw5iEjkDbGLZQ1kg1MMokQGDOfeXS4VR7B4MY39d467t2Ppek6XvuSArOLsKSf2xq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+<span class="text-xs uppercase tracking-widest text-white/70">Recent Work / Portraiture</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-dark border-t hairline-border py-20 px-8 lg:px-20">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">filter_vintage</span>
+<h2 class="text-lg font-bold tracking-tighter uppercase">Lumière</h2>
+</div>
+<p class="text-sm text-slate-500 font-light leading-relaxed">
+                        Redefining fashion and commercial photography through a lens of minimalist sophistication and cinematic light.
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h5 class="text-[10px] uppercase tracking-widest font-bold text-primary">Inquiries</h5>
+<a class="text-sm font-light hover:text-primary transition-colors" href="mailto:hello@lumiere.com">hello@lumiere.com</a>
+<p class="text-sm font-light">+1 (555) 012-3456</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-[10px] uppercase tracking-widest font-bold text-primary">Social</h5>
+<a class="text-sm font-light hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-sm font-light hover:text-primary transition-colors" href="#">Vogue Portfolio</a>
+<a class="text-sm font-light hover:text-primary transition-colors" href="#">Behance</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-[10px] uppercase tracking-widest font-bold text-primary">Location</h5>
+<p class="text-sm font-light" data-location="Paris, France">Paris, France</p>
+<p class="text-sm font-light" data-location="New York, USA">New York, USA</p>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-20 pt-8 border-t hairline-border flex justify-between items-center text-[10px] uppercase tracking-widest text-slate-500 font-bold">
+<p>© 2024 Lumière Photography. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

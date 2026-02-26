@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#16439c",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 100px;
+            gap: 2rem;
+        }
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+        .grayscale-img {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+        .project-card:hover .grayscale-img {
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1400px] mx-auto px-6 lg:px-12 flex h-20 items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">lens_blur</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tighter uppercase">Elias Vogue</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Editorial</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Archives</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">search</span>
+</button>
+<button class="bg-primary text-white px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
+                    Inquire
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
+<!-- Page Title Section -->
+<div class="mb-20">
+<p class="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4">Curated Works</p>
+<h1 class="text-5xl md:text-7xl font-extralight tracking-tighter max-w-4xl leading-tight">
+                Capturing the <span class="font-bold">unspoken</span> narratives of urban existence.
+            </h1>
+</div>
+<!-- Irregular Rhythmic Masonry Grid -->
+<div class="masonry-grid">
+<!-- Large Portrait -->
+<div class="project-card relative overflow-hidden group col-span-12 md:col-span-5 row-span-6 bg-slate-200 dark:bg-slate-900 rounded-xl">
+<img class="grayscale-img absolute inset-0 w-full h-full object-cover" data-alt="Monochrome portrait of a person in shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPKLwvCzO8Iy6fhrvS3B6F0cBsH3ZkMYp1kP-m0we-e6HRm4mcuQSB8jHuY-GEwIVqETO19KaH_Wtr0DDxZ8nYJvzKU4RTc9HpGxOsYDvbImktynHiv5wFc8e6ryNtc5TKE_mHUNabi-z6bjcK74_1XsW1aToZBSNhem64Su5oK2EftzXVwH1KHpiP-LoQL1H8hIwqm6uETf0E6W_UUkU3K-qKp35O_3rBf88ybcdPhAfIg8faxFdqKmO9_SZyaHFjhM5BpqrXUbBB"/>
+<div class="overlay opacity-0 absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] transition-opacity duration-300 flex items-end p-8">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white border-b border-white/30 pb-2">Noir Series — 2024</p>
+</div>
+</div>
+<!-- Horizontal Wide -->
+<div class="project-card relative overflow-hidden group col-span-12 md:col-span-7 row-span-4 bg-slate-200 dark:bg-slate-900 rounded-xl">
+<img class="grayscale-img absolute inset-0 w-full h-full object-cover" data-alt="Minimalist architectural lines in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxk7yt2NBm4p6B2K2bbLfVKxhxkCqzlMJJ8gtAnB9kK4st49sbks0MZn5Arhru2IKHbNEH7z1lnzIDTJAh1sT0ExwhaiyX4tQpnVoEBH6J_uOuGymE7jcXLF4OI0SdXsApC1jaYwjQGpfmcUEDqH1cr7ASnz7fnUqMo5otIm1OUj-Yvr54waFH7_K-Eb3x3QbLWuOcui_BwJjqc9feOtHgs29Wb7KADG6OEHJVnlGEzKVr57Aa6eo9py3Q0MALUlERPoJmGYgRvQzj"/>
+<div class="overlay opacity-0 absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] transition-opacity duration-300 flex items-end p-8">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white border-b border-white/30 pb-2">Structural Silence</p>
+</div>
+</div>
+<!-- Intentional Gap -->
+<div class="hidden md:block col-span-2 row-span-2"></div>
+<!-- Square Focus -->
+<div class="project-card relative overflow-hidden group col-span-12 md:col-span-5 row-span-4 bg-slate-200 dark:bg-slate-900 rounded-xl">
+<img class="grayscale-img absolute inset-0 w-full h-full object-cover" data-alt="Candid street photography in high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJv5MoLu-1hGBNCXvWJqFu-ECuvvhkIcFttuLwizuqjqUWaMc4fxSmsjmSdRD_g0FJkankQ8IhUVT7seQz_ygh3MNr6c34vs7EjbwyPuNS8NyViLAB74X1FlETj2MHYT-mQaz4-HtXB-oM64Ke9AxdvPArVYrxmeI0f0J8lf6ZSzbeIjCStGlegDnPgn8i3_LGDl2Cn-ONI0iGxhywqxXUmq_AaSNxzmDZXsAkSHIGbGEnYiwMfvpJdaYDJmD1lb3THSdfyecCx3WD"/>
+<div class="overlay opacity-0 absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] transition-opacity duration-300 flex items-end p-8">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white border-b border-white/30 pb-2">The Urbanist</p>
+</div>
+</div>
+<!-- Tall Portrait -->
+<div class="project-card relative overflow-hidden group col-span-12 md:col-span-4 row-span-6 bg-slate-200 dark:bg-slate-900 rounded-xl">
+<img class="grayscale-img absolute inset-0 w-full h-full object-cover" data-alt="Close up editorial portrait monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIIA4snRRukMRaLXZTgsABtwIlllMrP3_9Lpi25u-6UHZo-m6cPIHohRgp8aZaC9P-ko2DdYAceEkUvXKzoTf9KuYCovNNI1897ojj44Qf6hJJY2vRmIgGeZODQIW52BkAZ5cGU4ozlVsf1jQxSW1lxxWxCoAmaRZbaWwZDbqniyCGaZLabeWMGLDyguIIIzX3EwVX9iyWYcjaZrlaNE0D1VzhLP-6EIFmYUqTwEZQPld-TDvF9IFLi4IHlHtBEy2wlWXS1pfXqyt9"/>
+<div class="overlay opacity-0 absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] transition-opacity duration-300 flex items-end p-8">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white border-b border-white/30 pb-2">Faces of Vogue</p>
+</div>
+</div>
+<!-- Intentional Gap -->
+<div class="hidden md:block col-span-1 row-span-6"></div>
+<!-- Small Square -->
+<div class="project-card relative overflow-hidden group col-span-12 md:col-span-3 row-span-3 bg-slate-200 dark:bg-slate-900 rounded-xl">
+<img class="grayscale-img absolute inset-0 w-full h-full object-cover" data-alt="Dramatic landscape black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0nxi8NcD7eLcgiPUnyfeKCUdYmaB8uJR1lAv9ot8dLLtLb__HT5_tMS7ZgWWr4qZBpZq1LXNx0gLsd3BRc43rSyRtK2KZrO6-eoi47jSB6rY-MGXMtUHxLGVfA3jxaihXtpGpGCFFLdXjbgp70sg1shOppdeV9B1ML6unydg56Zz1gqDt_Sq1V6oa-rDSsEGVSf6IZ1siAwIANhVD4VIYXxwW23lAZMNKx-31Zbtu3EYt2Ydax2xDqFl3avHPOqOzSLxoJCpMpnhD"/>
+<div class="overlay opacity-0 absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] transition-opacity duration-300 flex items-end p-8">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white border-b border-white/30 pb-2">Distant Peaks</p>
+</div>
+</div>
+<!-- Large Horizontal -->
+<div class="project-card relative overflow-hidden group col-span-12 md:col-span-7 row-span-5 bg-slate-200 dark:bg-slate-900 rounded-xl">
+<img class="grayscale-img absolute inset-0 w-full h-full object-cover" data-alt="Atmospheric sunset over water monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBnTmZrpacLM11GmRPupzyovyAWmNqtlxkjKkakNjlyae_QBwhoqt0pXyEUZbSKU9eZ6ddCmtrCyIgdHFVxc2qWuPvU9UxitvdB9OsrVKdpnHVqSCb_j32QgGOkHm4W0ypZkyz32164FYUaTfNN_0QwVqJF38IMHw-2iJUTsvBtjuv6eEAYgKr1ng_K1BAMXOK5mVEmGFn70jdjDXe22cfl5omfewE1cO1M1pYZJAxBB2D4tbzW5N83nr3N0YpcQSWdE9YYukB55TK"/>
+<div class="overlay opacity-0 absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] transition-opacity duration-300 flex items-end p-8">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white border-b border-white/30 pb-2">Twilight Rhythms</p>
+</div>
+</div>
+<!-- Final Small Focus -->
+<div class="project-card relative overflow-hidden group col-span-12 md:col-span-5 row-span-4 bg-slate-200 dark:bg-slate-900 rounded-xl">
+<img class="grayscale-img absolute inset-0 w-full h-full object-cover" data-alt="Abstract mountain texture black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0TF9AvQDUZyOQNLhO2WyHPt18EwP0dFKE2VMypa7z7PHkV7YFPMdbMRs8mNBNzyGE_ttmcoPGrhy9xX8rsoo_hTd6Nw749-LN8thTFFZ3pW4n0kvVRyCIdQv3xLUDw1dti0Y8yxNChxhbP5UZh140dArEwnWz2aEWylMM36KQCyJCYwO6bwypE9HBB9RPIBR8bKVOhjQi4GhqPWa-5-xsd-6wrpycOLyInZLY7_f0KxOBZscvSvwOcWdRayO4RCf3KdzB8UFNcFXE"/>
+<div class="overlay opacity-0 absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] transition-opacity duration-300 flex items-end p-8">
+<p class="text-[10px] font-bold tracking-[0.4em] uppercase text-white border-b border-white/30 pb-2">Monolith Study</p>
+</div>
+</div>
+</div>
+<!-- Load More Section -->
+<div class="mt-24 text-center">
+<button class="group inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] hover:text-primary transition-colors">
+                Explore More Works
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+</button>
+</div>
+</main>
+<!-- Simple Minimal Footer -->
+<footer class="mt-20 py-16 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+<div class="max-w-xs">
+<h3 class="text-lg font-bold uppercase tracking-tighter mb-4">Elias Vogue</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    A collection of visual experiments exploring the intersection of architecture, identity, and the urban void.
+                </p>
+</div>
+<div class="flex flex-wrap gap-12">
+<div class="flex flex-col gap-3">
+<p class="text-[10px] font-black uppercase tracking-widest text-primary">Social</p>
+<a class="text-sm hover:text-primary" href="#">Instagram</a>
+<a class="text-sm hover:text-primary" href="#">Behance</a>
+<a class="text-sm hover:text-primary" href="#">Twitter</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-[10px] font-black uppercase tracking-widest text-primary">Contact</p>
+<a class="text-sm hover:text-primary" href="#">Studio</a>
+<a class="text-sm hover:text-primary" href="#">Prints</a>
+<a class="text-sm hover:text-primary" href="#">Press</a>
+</div>
+</div>
+<div class="text-slate-400 dark:text-slate-500 text-[10px] font-medium tracking-widest uppercase">
+                © 2024 ELIAS VOGUE STUDIO. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

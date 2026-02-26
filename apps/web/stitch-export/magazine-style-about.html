@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#16439c",
+              "background-light": "#f6f6f8",
+              "background-dark": "#0a0a0a",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"],
+              "serif": ["Playfair Display", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.grainy-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDgiAGAcAAdLrH5huKSbSvXSc-kQdDWAKqOcp-Lp_f0Xru3AppMsnA_-o1ta4PRTx4mstQqKhZ63m2M7bqXrB3JBGgISF4FW67-bYiYxEaDYbgFQ_4Eo1TDwF-1XZxHC5csmXRtWLhXJcZxVBwS5CIY5gkQ6hppgcKyby0FCM_MJBmLVnvs5s-UB8HeY6yRecy82dBwP8WfRYo5D_X-bE4QHkrW7QktW9spZbk07ugWne0-7j-DK38CmWwoiLLOPPo1kjKTONrFXEYW);
+    opacity: 0.03
+    }
+.text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed
+    }
+.signature {
+    font-family: "Playfair Display", serif;
+    font-style: italic
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<!-- Top Navigation Component -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between whitespace-nowrap border-b border-white/10 px-6 py-6 bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-4 text-slate-100">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-100 text-xl font-bold leading-tight tracking-widest uppercase">Elias Vogue</h2>
+</div>
+<div class="flex flex-1 justify-end gap-12">
+<nav class="flex items-center gap-12">
+<a class="text-slate-400 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="#">Portfolio</a>
+<a class="text-slate-400 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="#">Editorial</a>
+<a class="text-white text-xs font-bold uppercase tracking-widest border-b border-white pb-1" href="#">About</a>
+<a class="text-slate-400 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden h-10 px-6 bg-white text-black text-xs font-bold uppercase tracking-[0.2em] hover:bg-slate-200 transition-all">
+<span class="truncate">Inquire</span>
+</button>
+</div>
+</header>
+<main class="relative pt-32 px-10 max-w-[1440px] mx-auto w-full pb-40">
+<!-- Background Grain Overlay -->
+<div class="fixed inset-0 pointer-events-none grainy-bg"></div>
+<div class="relative grid grid-cols-12 gap-8 items-start">
+<!-- Left Column: Asymmetrical Portrait -->
+<div class="col-span-12 lg:col-span-7 relative">
+<div class="aspect-[4/5] w-full bg-slate-900 overflow-hidden shadow-2xl">
+<img alt="Elias Vogue Portrait" class="w-full h-full object-cover grayscale contrast-125" data-alt="Grainy black and white portrait of photographer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQXvQC6EQHTAVrC_GMf6S2RnLSiAttUAZxZ1r47kYdYxW8vuFsTMoWjz0FsuPuC-DebuzJ32byqnSS45yI6duO_OHCsmrTHNSfXizFucw80p3LkbCviGx5RbIzpy-vwgkiwcjglhyZ5SNGAgNEzQOsoLoRugy4puFnZ8eww6vBaMRTL_BuypCBcvmvs5l1Scov-8CXKOBSlnn3bXPXDm5Z8cYsfJlY38K0G6sa4xe1XHcmjLc8h3kpzWxeIaH8H5gFv1hZA568H86C"/>
+</div>
+<!-- Signature Font Overlay -->
+<div class="absolute -bottom-12 -right-8 z-10">
+<span class="signature text-8xl lg:text-[10rem] text-slate-100/90 mix-blend-difference select-none">E. Vogue</span>
+</div>
+</div>
+<!-- Right Column: Magazine Layout Content -->
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-24 pt-12 lg:pl-16">
+<!-- Floating Text Block 1: Headline -->
+<div class="relative group">
+<div class="absolute -left-10 top-0 h-full w-[1px] bg-slate-800"></div>
+<h1 class="text-6xl font-extralight tracking-tighter leading-none mb-6">
+                            THE SILENCE <br/> OF THE <span class="italic font-serif">LENS.</span>
+</h1>
+<p class="text-slate-400 text-sm font-medium tracking-widest uppercase mb-12">Established 2012 — Paris, FR</p>
+</div>
+<!-- Floating Text Block 2: Philosophy -->
+<div class="max-w-md ml-auto lg:ml-0 translate-x-4 lg:translate-x-12">
+<h3 class="text-xs font-bold uppercase tracking-[0.3em] text-slate-500 mb-6">Philosophy</h3>
+<p class="text-slate-300 text-lg leading-relaxed font-light">
+                            A vision defined by the interplay of shadow and light. My work explores the boundary between high-fashion artifice and raw human emotion, captured through a monochromatic lens that strips away the noise of color.
+                        </p>
+</div>
+<!-- Vertical Decoration Text -->
+<div class="absolute top-0 right-0 h-full flex flex-col justify-between py-24 pointer-events-none">
+<span class="text-vertical text-[10px] uppercase tracking-[1em] text-slate-700">EDITORIAL SPECIALIST</span>
+<span class="text-vertical text-[10px] uppercase tracking-[1em] text-slate-700">©2024 ARCHIVE</span>
+</div>
+<!-- Floating Text Block 3: Selected Clients -->
+<div class="mt-12 bg-white/[0.02] border-l border-white/10 p-8 backdrop-blur-sm -ml-8 lg:-ml-24">
+<h3 class="text-xs font-bold uppercase tracking-[0.3em] text-slate-500 mb-8">Selected Collaborations</h3>
+<div class="grid grid-cols-2 gap-x-12 gap-y-6 text-sm font-light tracking-widest uppercase text-slate-200">
+<div class="flex flex-col gap-2 hover:text-white transition-colors cursor-default">
+<span class="text-[10px] text-slate-600 font-bold">01</span>
+<span>Vogue Italia</span>
+</div>
+<div class="flex flex-col gap-2 hover:text-white transition-colors cursor-default">
+<span class="text-[10px] text-slate-600 font-bold">02</span>
+<span>L'Officiel</span>
+</div>
+<div class="flex flex-col gap-2 hover:text-white transition-colors cursor-default">
+<span class="text-[10px] text-slate-600 font-bold">03</span>
+<span>Saint Laurent</span>
+</div>
+<div class="flex flex-col gap-2 hover:text-white transition-colors cursor-default">
+<span class="text-[10px] text-slate-600 font-bold">04</span>
+<span>Dior Homme</span>
+</div>
+<div class="flex flex-col gap-2 hover:text-white transition-colors cursor-default">
+<span class="text-[10px] text-slate-600 font-bold">05</span>
+<span>Numéro Tokyo</span>
+</div>
+<div class="flex flex-col gap-2 hover:text-white transition-colors cursor-default">
+<span class="text-[10px] text-slate-600 font-bold">06</span>
+<span>Antidote</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Lower Section: Negative Space & Accents -->
+<div class="mt-60 grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-12">
+<p class="text-slate-500 text-xs leading-loose tracking-widest italic">
+                        "Color is descriptive, <br/> 
+                        black and white is interpretive." <br/>
+                        — Elliott Erwitt
+                    </p>
+<div class="w-24 h-[1px] bg-slate-700"></div>
+</div>
+<div class="col-span-12 lg:col-span-8 flex justify-end">
+<div class="relative w-full max-w-2xl">
+<div class="aspect-video bg-slate-900 grayscale brightness-75">
+<img alt="Atmospheric shot" class="w-full h-full object-cover opacity-50 grayscale" data-alt="Abstract monochrome shadow pattern on architectural wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALcq_7kDDDRhhdhEP70dOIqUgzMLQlKr40dBy6jGBlqBloC7RVVgBj_KD_NWvu0NqVu2ihLTcVw6Fg1kq1pQE8ApWwSktRKCRPwRMmT9lkm54dR3f03YP1hX1NwJ2pY4Ka0HyAeRMKo32QV1w8hgUy3v8o3RHo-CDDwFGJA5G-XE60TkhxVwliW-TvqStrO3oCX2klIDeeh9vIufjE49pvmS_Z_2FNGenDw9HZo1X0NALiFWcw2AunMnZ5yycUfFU-4v3aiylnPmdd"/>
+</div>
+<div class="absolute -top-20 -left-20 bg-background-dark p-12 hidden lg:block">
+<p class="text-slate-100 text-3xl font-extralight tracking-tighter max-w-xs">
+                                Seeking the essence of the <span class="font-serif italic underline underline-offset-8">human form</span> through light.
+                             </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Links Floating -->
+<div class="mt-40 border-t border-white/10 pt-10 flex flex-wrap justify-between items-center gap-8">
+<div class="flex gap-12">
+<a class="text-[10px] uppercase tracking-[0.3em] font-bold text-slate-500 hover:text-white transition-colors" href="#">Instagram</a>
+<a class="text-[10px] uppercase tracking-[0.3em] font-bold text-slate-500 hover:text-white transition-colors" href="#">Behance</a>
+<a class="text-[10px] uppercase tracking-[0.3em] font-bold text-slate-500 hover:text-white transition-colors" href="#">LinkedIn</a>
+</div>
+<div class="text-[10px] uppercase tracking-[0.3em] font-bold text-slate-700">
+                    Paris — New York — Tokyo
+                </div>
+</div>
+</main>
+<footer class="w-full py-12 px-10 border-t border-white/5 flex flex-col items-center">
+<span class="text-slate-800 text-[12rem] font-bold select-none leading-none tracking-tighter opacity-10">VOGUE</span>
+<p class="text-slate-600 text-[10px] uppercase tracking-[0.5em] -mt-10">All rights reserved ©2024</p>
+</footer>
+</div>
+</body></html>
